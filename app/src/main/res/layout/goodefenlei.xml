@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/red1"
+        android:gravity="center_vertical">
+        <EditText
+            android:layout_width="260dp"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:layout_marginLeft="15dp"
+            android:hint="请输入要搜索的商品"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="搜索"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"/>
+    </RelativeLayout>
+
+   <RadioGroup
+       android:id="@+id/goods_rg"
+       style="@style/top_banner">
+     <RadioButton
+         android:id="@+id/goods_price_rb"
+         style="@style/top_banner_item"
+         android:text="价格"/>
+     <RadioButton
+         android:id="@+id/goods_sales_rb"
+         style="@style/top_banner_item"
+         android:text="销量"/>
+     <RadioButton
+         android:id="@+id/goods_popularity_rb"
+         style="@style/top_banner_item"
+         android:text="人气"/>
+     <RadioButton
+         android:id="@+id/goods_shelves_rb"
+         style="@style/top_banner_item"
+         android:text="上架时间"/>
+   </RadioGroup>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/goodsfenlei_vg"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+    </android.support.v4.view.ViewPager>
+  <!--<ListView-->
+      <!--android:id="@+id/goodsfenlei_lv"-->
+      <!--android:layout_width="wrap_content"-->
+      <!--android:layout_height="wrap_content"></ListView>-->
+</LinearLayout>
